@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_series/Screens/SignUp/signupscreen.dart';
+import 'package:instagram_series/Screens/bottomnav/bottomnav.dart';
 import 'package:instagram_series/Widgets/uihelper.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -38,14 +39,18 @@ class LoginScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 10),
-            UiHelper.CustomButton(callback: () {}, buttonname: "Log In"),
+            UiHelper.CustomButton(callback: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavScreen()));
+            }, buttonname: "Log In"),
             SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 UiHelper.CustomImage(imgurl: "Icon.png"),
                 UiHelper.CustomTextButton(
-                  callback: () {},
+                  callback: () {
+
+                  },
                   text: "Log in with Facebook",
                 ),
               ],
